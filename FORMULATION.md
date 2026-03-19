@@ -27,9 +27,14 @@ To accurately map the ascending limb of intoxication and the delayed equilibrium
 $$V_c = 0.35 \times TBW$$
 $$V_p = 0.65 \times TBW$$
 
-The dynamic flow of ethanol is calculated via ordinary differential equations (ODEs), where $A$ represents the absolute mass of ethanol (in grams) in a specific compartment at time $t$:
+The dynamic flow of ethanol is calculated via ordinary differential equations (ODEs), where $A$ represents the absolute mass of ethanol (in grams) in a specific compartment at time $t$. 
 
-**1. Gastrointestinal Absorption (First-Order):**
+**1. Gastrointestinal Input and Absorption (First-Order):**
+To account for first-pass metabolism, the initial dose of ethanol deposited into the gastrointestinal tract is scaled by the oral bioavailability constant ($F_{oral}$). 
+
+$$A_{GI(initial)} = \text{Dose}_{grams} \times F_{oral}$$
+
+The absorption from the GI tract into the central compartment follows first-order kinetics:
 $$\frac{dA_{GI}}{dt} = -k_a \times A_{GI}$$
 
 **2. Central Compartment (Absorption + Intercompartmental Flux - Elimination):**
@@ -38,7 +43,7 @@ $$\frac{dA_c}{dt} = k_a \times A_{GI} - Q \left( \frac{A_c}{V_c} - \frac{A_p}{V_
 **3. Peripheral Compartment (Intercompartmental Flux):**
 $$\frac{dA_p}{dt} = Q \left( \frac{A_c}{V_c} - \frac{A_p}{V_p} \right)$$
 
-*(Where $k_a$ is the absorption rate constant, and $Q$ is the intercompartmental clearance rate in L/h).*
+*(Where $k_a$ is the absorption rate constant, and $Q$ is the capillary intercompartmental clearance rate in L/h).*
 
 ## 4. Non-Linear Elimination (Michaelis-Menten Kinetics)
 Hepatic oxidation of ethanol shifts from first-order to zero-order at clinically relevant concentrations. The engine utilizes the Michaelis-Menten equation to calculate the elimination velocity ($v_{elim}$) within the central compartment:
@@ -56,15 +61,16 @@ Caloric bulk in the gastrointestinal tract alters pharmacokinetics. The engine m
 $$v_{max(fed)} = v_{max(fasted)} \times FE$$
 
 ## 6. System Constants Matrix
-The following constants (Büsker et al., 2023) must be initialized to solve the differential equations:
+The following constants (Büsker et al., 2023) reflect **capillary** parameter estimates to closely mirror arterial blood alcohol levels (breathalyzer equivalents) and must be initialized to solve the differential equations:
 
 | Parameter | Symbol | Fasted Value | Fed Value | Unit |
 | :--- | :--- | :--- | :--- | :--- |
+| Oral Bioavailability | $F_{oral}$ | 0.944 | 0.944 | scalar |
 | Absorption Rate Constant | $k_a$ | 3.64 | 1.45 | $h^{-1}$ |
 | Max Elimination Rate | $v_{max}$ | 6.31 | 8.77 *(6.31 × 1.39)* | g/h |
 | Food Effect Factor | $FE$ | 1.00 *(Baseline)* | 1.39 | scalar |
-| Michaelis-Menten Constant | $K_m$ | 0.0849 | 0.0849 | g/L |
-| Intercompartmental Clearance | $Q$ | 96.8 | 96.8 | L/h |
+| Capillary Michaelis-Menten | $K_m$ | 0.0121 | 0.0121 | g/L |
+| Capillary Intercomp. Clearance | $Q$ | 47.7 | 47.7 | L/h |
 
 ## 7. Final Output Generation
 To display the user's BAC as a standard percentage (g/dL), the engine extracts the current concentration of the central compartment ($C_c$ in g/L) and divides by 10:
