@@ -21,11 +21,11 @@ This calculated TBW value serves as the absolute baseline for the Volume of Dist
 ## 3. The Two-Compartment Differential Equations
 To accurately map the ascending limb of intoxication and the delayed equilibrium between blood and tissue, the system relies on a two-compartment structural model:
 
-* **Central Compartment ($V_c$):** Bloodstream and highly perfused organs (35% of TBW).
-* **Peripheral Compartment ($V_p$):** Resting tissue and skeletal muscle (65% of TBW).
+* **Central Compartment ($V_c$):** Bloodstream and highly perfused organs (57% of TBW).
+* **Peripheral Compartment ($V_p$):** Resting tissue and skeletal muscle (43% of TBW).
 
-$$V_c = 0.35 \times TBW$$
-$$V_p = 0.65 \times TBW$$
+$$V_c = 0.57 \times TBW$$
+$$V_p = 0.43 \times TBW$$
 
 The dynamic flow of ethanol is calculated via ordinary differential equations (ODEs), where $A$ represents the absolute mass of ethanol (in grams) in a specific compartment at time $t$. 
 
