@@ -30,11 +30,11 @@ $$V_p = 0.65 \times TBW$$
 The dynamic flow of ethanol is calculated via ordinary differential equations (ODEs), where $A$ represents the absolute mass of ethanol (in grams) in a specific compartment at time $t$. 
 
 **1. Gastrointestinal Input and Absorption (First-Order):**
-To account for first-pass metabolism, the initial dose of ethanol deposited into the gastrointestinal tract is scaled by the oral bioavailability constant ($F_{oral}$). 
+To account for first-pass metabolism, the initial dose of ethanol deposited into the gastrointestinal tract is scaled by the oral bioavailability constant ($F_{oral}$), where $F_{oral}$ represents the surviving fraction that reaches systemic circulation. 
 
 $$A_{GI(initial)} = \text{Dose}_{grams} \times F_{oral}$$
 
-The absorption from the GI tract into the central compartment follows first-order kinetics:
+The absorption from this bioavailable GI pool into the central compartment follows first-order kinetics:
 $$\frac{dA_{GI}}{dt} = -k_a \times A_{GI}$$
 
 **2. Central Compartment (Absorption + Intercompartmental Flux - Elimination):**
