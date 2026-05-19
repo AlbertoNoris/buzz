@@ -1,6 +1,6 @@
 # Privacy Policy — Buzz
 
-**Last updated:** May 15, 2026
+**Last updated:** May 19, 2026
 
 Buzz ("the App") is developed by Alberto Noris ("we", "us"). This Privacy Policy explains what information the App collects, how it is used, and which third parties process it on our behalf. By using Buzz you agree to the practices described below.
 
@@ -65,6 +65,24 @@ Privacy policy: https://www.tiktok.com/legal/page/global/privacy-policy/en
 ### 3.5 Apple SKAdNetwork
 Independently of AppsFlyer, Apple's privacy-preserving SKAdNetwork framework sends Apple-validated conversion postbacks to Apple, which forwards anonymized aggregated postbacks to ad networks (including TikTok). SKAdNetwork postbacks never contain user-identifying information and are signed by Apple.
 
+### 3.6 Apple HealthKit — Optional write-only sync (stays on your device)
+
+With your explicit permission, the App can mirror the drinks you log into the system **Apple Health** app on your device. For each drink, the App writes two values:
+- the **number of standard drinks** (`HKQuantityTypeIdentifierNumberOfAlcoholicBeverages`, using the US/NIAAA convention of 14 g of pure alcohol per standard drink), and
+- the **calories from that drink** (`HKQuantityTypeIdentifierDietaryEnergyConsumed`, in kilocalories).
+
+This data is stored only inside Apple Health on your device. It is **never transmitted to us, to Apple's servers, or to any third party.** Apple Health is end-to-end encrypted across your devices when you enable iCloud sync for it.
+
+**The App requests write-only access. We do not read any data from Apple Health.** Drinks, calories, or any other data already added to Apple Health by other apps remain invisible to Buzz.
+
+You can control this in two ways:
+- **In Buzz:** Settings → Integrations → Apple Health. Toggling off stops any further writes immediately. Drinks already written to Apple Health remain there — only you can delete them, from inside the Apple Health app.
+- **In iOS:** Settings → Health → Data Access & Devices → Buzz Control. You can revoke either of the two write permissions at any time.
+
+If you decline this permission during onboarding or in Settings, the App functions normally without any Apple Health sync.
+
+Apple HealthKit privacy framework: https://support.apple.com/HT203037
+
 ---
 
 ## 4. App Tracking Transparency (ATT)
@@ -84,7 +102,8 @@ You can change your choice at any time in **iOS Settings → Privacy & Security 
 We do not collect, store, or transmit:
 - Your name, email, or any account credential (the App does not have user accounts).
 - Your precise location or GPS data.
-- Your contacts, calendar, photos, microphone, camera, or HealthKit data.
+- Your contacts, calendar, photos, microphone, camera, or motion data.
+- Any data **from** Apple Health. We can optionally **write** drinks to Apple Health on your device (Section 3.6), but we never read anything back from it, and nothing written to Apple Health is transmitted off your device by us.
 - Your payment-card details (these stay between you and Apple).
 - Your drink logs, food events, profile, or history (these stay on your device).
 
@@ -96,8 +115,9 @@ The App may request the following iOS permissions:
 
 - **Notifications** — to send local reminders (hydration, recovery, streak nudges). Notifications are scheduled and shown entirely on your device; no push-notification service is involved.
 - **App Tracking Transparency** — see Section 4 above.
+- **Apple Health (write-only, optional)** — see Section 3.6 above. The App only asks for permission to *write* drinks and calories to Apple Health, never to read.
 
-The App does **not** request access to your camera, microphone, location, contacts, calendar, photos, HealthKit, or motion.
+The App does **not** request access to your camera, microphone, location, contacts, calendar, photos, or motion.
 
 ---
 
