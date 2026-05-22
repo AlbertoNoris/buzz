@@ -1,4 +1,4 @@
-# Privacy Policy — Buzz
+# Privacy Policy, Buzz
 
 **Last updated:** May 21, 2026 (session replay enabled)
 
@@ -34,11 +34,11 @@ This data remains on your device until you delete it (in-app deletion, iOS Stora
 
 To run paid subscriptions and to measure marketing campaigns, the App uses a small number of third-party services. Each of them is an independent data controller for the data they receive. Links to their privacy policies are provided.
 
-### 3.1 Apple App Store — In-App Purchases
-Apple Inc. processes your in-app purchases and subscriptions on our behalf. We receive only a transaction receipt and the resulting subscription status — we never receive your payment details, credit card, or Apple ID.
+### 3.1 Apple App Store, In-App Purchases
+Apple Inc. processes your in-app purchases and subscriptions on our behalf. We receive only a transaction receipt and the resulting subscription status, we never receive your payment details, credit card, or Apple ID.
 Privacy policy: https://www.apple.com/legal/privacy/
 
-### 3.2 RevenueCat — Subscriptions and entitlements
+### 3.2 RevenueCat, Subscriptions and entitlements
 We use **RevenueCat, Inc.** to validate Apple receipts, deliver paywalls, and grant or revoke the "Buzz Pro" entitlement. RevenueCat receives:
 - a randomly generated, anonymous "App User ID" (no email, no name)
 - the Apple receipt token / original transaction ID
@@ -48,7 +48,7 @@ We use **RevenueCat, Inc.** to validate Apple receipts, deliver paywalls, and gr
 RevenueCat does **not** receive your IDFA, your name, or your drink data.
 Privacy policy: https://www.revenuecat.com/privacy
 
-### 3.3 AppsFlyer — Install attribution and marketing measurement
+### 3.3 AppsFlyer, Install attribution and marketing measurement
 We use **AppsFlyer Ltd.** to understand which marketing campaign (if any) led you to install the App. AppsFlyer processes:
 - when ATT is **authorized**: IDFA (Apple Advertising Identifier), IDFV, device model, OS, IP address, country, install timestamp, install source, in-app events listed below
 - when ATT is **denied**: no IDFA. AppsFlyer still receives anonymous probabilistic signals (device model, OS, IP, country, install timestamp) used to estimate aggregate attribution. These signals are not used to identify you individually.
@@ -58,26 +58,26 @@ In-app events sent to AppsFlyer: onboarding completion, paywall viewed, plus ser
 AppsFlyer does **not** receive your drink logs, profile data, name or email.
 Privacy policy: https://www.appsflyer.com/legal/services-privacy-policy/
 
-### 3.4 TikTok For Business — Ad measurement (via AppsFlyer)
+### 3.4 TikTok For Business, Ad measurement (via AppsFlyer)
 We run advertising campaigns on **TikTok For Business** (operated by ByteDance Ltd.). We do **not** integrate the TikTok SDK directly inside the App. AppsFlyer forwards aggregated and (where applicable) hashed conversion events to TikTok so we can measure which ads drove installs and subscriptions. When ATT is authorized, your IDFA is included in this forwarding; when ATT is denied, only aggregated SKAdNetwork postbacks and probabilistic signals are forwarded.
 Privacy policy: https://www.tiktok.com/legal/page/global/privacy-policy/en
 
 ### 3.5 Apple SKAdNetwork
 Independently of AppsFlyer, Apple's privacy-preserving SKAdNetwork framework sends Apple-validated conversion postbacks to Apple, which forwards anonymized aggregated postbacks to ad networks (including TikTok). SKAdNetwork postbacks never contain user-identifying information and are signed by Apple.
 
-### 3.6 PostHog — Product analytics and session replay
+### 3.6 PostHog, Product analytics and session replay
 We use **PostHog Inc.** (EU region, hosted at `eu.i.posthog.com`) to measure how users move through the App so we can improve onboarding, paywall conversion, and feature usage. PostHog receives:
-- a randomly generated, anonymous "distinct ID" (the same anonymous device identifier used for attribution — no email, no name)
+- a randomly generated, anonymous "distinct ID" (the same anonymous device identifier used for attribution, no email, no name)
 - app version, OS version, device model, device locale, country (derived from IP)
 - automatic application-lifecycle events (Application Opened, Application Backgrounded, Application Updated)
 - the following in-app product events: `onboarding_completed` (with profile aggregates: biological sex, age, habitual-drinker flag, unit system), `paywall_viewed` (with the surface placement that triggered it), and `paywall_purchased` (with product identifier, price, and currency)
-- **session replay recordings** of your interactions with the App — taps, swipes, screen transitions, and the visual layout. To protect your privacy, **all text and all images on every screen are masked before the recording leaves your device**: PostHog receives the shape and timing of your interactions, not the readable values. This means your drink amounts, alcohol percentages, profile numbers, recovery tips text, and drink emoji are never readable in a recording — they appear as masked placeholders. IP addresses are anonymized server-side.
+- **session replay recordings** of your interactions with the App, taps, swipes, screen transitions, and the visual layout. To protect your privacy, **all text and all images on every screen are masked before the recording leaves your device**: PostHog receives the shape and timing of your interactions, not the readable values. This means your drink amounts, alcohol percentages, profile numbers, recovery tips text, and drink emoji are never readable in a recording, they appear as masked placeholders. IP addresses are anonymized server-side.
 
 PostHog does **not** receive your IDFA, your individual drink history as data, your name, or your email.
 
 Privacy policy: https://posthog.com/privacy
 
-### 3.7 Apple HealthKit — Optional write-only sync (stays on your device)
+### 3.7 Apple HealthKit, Optional write-only sync (stays on your device)
 
 With your explicit permission, the App can mirror the drinks you log into the system **Apple Health** app on your device. For each drink, the App writes two values:
 - the **number of standard drinks** (`HKQuantityTypeIdentifierNumberOfAlcoholicBeverages`, using the US/NIAAA convention of 14 g of pure alcohol per standard drink), and
@@ -88,7 +88,7 @@ This data is stored only inside Apple Health on your device. It is **never trans
 **The App requests write-only access. We do not read any data from Apple Health.** Drinks, calories, or any other data already added to Apple Health by other apps remain invisible to Buzz.
 
 You can control this in two ways:
-- **In Buzz:** Settings → Integrations → Apple Health. Toggling off stops any further writes immediately. Drinks already written to Apple Health remain there — only you can delete them, from inside the Apple Health app.
+- **In Buzz:** Settings → Integrations → Apple Health. Toggling off stops any further writes immediately. Drinks already written to Apple Health remain there, only you can delete them, from inside the Apple Health app.
 - **In iOS:** Settings → Health → Data Access & Devices → Buzz Control. You can revoke either of the two write permissions at any time.
 
 If you decline this permission during onboarding or in Settings, the App functions normally without any Apple Health sync.
@@ -125,9 +125,9 @@ We do not collect, store, or transmit:
 
 The App may request the following iOS permissions:
 
-- **Notifications** — to send local reminders (hydration, recovery, streak nudges). Notifications are scheduled and shown entirely on your device; no push-notification service is involved.
-- **App Tracking Transparency** — see Section 4 above.
-- **Apple Health (write-only, optional)** — see Section 3.7 above. The App only asks for permission to *write* drinks and calories to Apple Health, never to read.
+- **Notifications**, to send local reminders (hydration, recovery, streak nudges). Notifications are scheduled and shown entirely on your device; no push-notification service is involved.
+- **App Tracking Transparency**, see Section 4 above.
+- **Apple Health (write-only, optional)**, see Section 3.7 above. The App only asks for permission to *write* drinks and calories to Apple Health, never to read.
 
 The App does **not** request access to your camera, microphone, location, contacts, calendar, photos, or motion.
 
@@ -141,7 +141,7 @@ The App does **not** request access to your camera, microphone, location, contac
 - **PostHog** keeps product-analytics event data per their published retention policy. To request deletion: privacy@posthog.com.
 - **TikTok** keeps the aggregated conversion data it receives for advertising measurement per its own retention policy.
 
-Because Buzz does not maintain its own user accounts or its own servers, we cannot delete data on your behalf from these third parties — please contact them directly.
+Because Buzz does not maintain its own user accounts or its own servers, we cannot delete data on your behalf from these third parties, please contact them directly.
 
 ---
 

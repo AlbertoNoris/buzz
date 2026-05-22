@@ -1,4 +1,4 @@
-# Terms of Use — Buzz
+# Terms of Use, Buzz
 
 **Last updated:** May 15, 2026
 
@@ -14,7 +14,7 @@ These Terms form a binding agreement between you and Alberto Noris. They apply a
 
 Buzz is intended only for users who are at least **18 years old**, or the legal drinking age in your jurisdiction (whichever is higher). You are responsible for ensuring you are legally allowed to use alcohol-related tools where you live.
 
-## 3. Informational use only — NOT a safety tool
+## 3. Informational use only, NOT a safety tool
 
 Buzz provides a **non-numeric, unit-less awareness visualization** and tracks standard units, calories, and patterns over time. **Buzz does NOT measure your Blood Alcohol Concentration (BAC)** and must **never** be used to decide whether it is safe or legal to drive, operate machinery, or take any other action where impairment matters.
 
