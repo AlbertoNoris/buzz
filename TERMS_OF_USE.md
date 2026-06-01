@@ -1,6 +1,6 @@
 # Terms of Use, Buzz
 
-**Last updated:** May 15, 2026
+**Last updated:** June 1, 2026
 
 Buzz ("the App") is developed by Alberto Noris ("we", "us"). By downloading, installing, or using Buzz, you agree to these Terms of Use. If you do not agree, do not use the App.
 
@@ -60,7 +60,7 @@ The App, its name "Buzz", its branding, and its underlying code are protected by
 
 ## 8. Third-party services
 
-The App uses third-party services for subscriptions, install attribution, and ad measurement (RevenueCat, AppsFlyer, Apple SKAdNetwork, TikTok For Business). See the Privacy Policy for the full list and links to their policies. These services are independent and governed by their own terms.
+The App uses third-party services for subscriptions, install attribution, ad measurement, product analytics, and session replay (RevenueCat, AppsFlyer, Apple SKAdNetwork, TikTok For Business, PostHog). See the Privacy Policy for the full list and links to their policies. These services are independent and governed by their own terms.
 
 ## 9. No warranty
 

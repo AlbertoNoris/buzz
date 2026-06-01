@@ -1,6 +1,6 @@
 # Privacy Policy, Buzz
 
-**Last updated:** May 21, 2026 (session replay enabled)
+**Last updated:** June 1, 2026 (unmasked session replay)
 
 Buzz ("the App") is developed by Alberto Noris ("we", "us"). This Privacy Policy explains what information the App collects, how it is used, and which third parties process it on our behalf. By using Buzz you agree to the practices described below.
 
@@ -71,9 +71,9 @@ We use **PostHog Inc.** (EU region, hosted at `eu.i.posthog.com`) to measure how
 - app version, OS version, device model, device locale, country (derived from IP)
 - automatic application-lifecycle events (Application Opened, Application Backgrounded, Application Updated)
 - the following in-app product events: `onboarding_completed` (with profile aggregates: biological sex, age, habitual-drinker flag, unit system), `paywall_viewed` (with the surface placement that triggered it), and `paywall_purchased` (with product identifier, price, and currency)
-- **session replay recordings** of your interactions with the App, taps, swipes, screen transitions, and the visual layout. To protect your privacy, **all text and all images on every screen are masked before the recording leaves your device**: PostHog receives the shape and timing of your interactions, not the readable values. This means your drink amounts, alcohol percentages, profile numbers, recovery tips text, and drink emoji are never readable in a recording, they appear as masked placeholders. IP addresses are anonymized server-side.
+- **session replay recordings** of your interactions with the App, taps, swipes, screen transitions, and the visual layout. Session replays are not masked by default, so recordings may include text, icons, emoji, images, and values visible on the screen, including drink amounts, alcohol percentages, calories, profile values, onboarding answers, recovery tips, drink history, and custom drink labels. We use these recordings only for product analytics, debugging, and improving the App experience. IP addresses are anonymized server-side.
 
-PostHog does **not** receive your IDFA, your individual drink history as data, your name, or your email.
+PostHog does **not** receive your IDFA, your name, your email, or your payment card details. Buzz does not ask for payment card numbers, and Apple processes App Store payments outside our app UI.
 
 Privacy policy: https://posthog.com/privacy
 
